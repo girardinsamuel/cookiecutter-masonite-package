@@ -17,8 +17,8 @@ branch: master
 # default: empty
 # allowed: list
 requirements:
-  - requirements.txt
-  - {{cookiecutter.project_slug}}/requirements.txt 
+  - "requirements.txt"
+  - "{{cookiecutter.project_slug}}/requirements.txt"
 
 # add a label to pull requests, default is not set
 # requires private repo permissions, even on public repos
