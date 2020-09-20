@@ -1,5 +1,5 @@
 # Cookiecutter Masonite package
-
+<img src="https://pyup.io/repos/github/girardinsamuel/cookiecutter-masonite-package/python-3-shield.svg?t=1600644773859" class="badge-modal-trigger-py3 shield" data-toggle="tooltip" data-placement="top" title="show url" id="py3-shield">
 
 ## Quickstart
 
