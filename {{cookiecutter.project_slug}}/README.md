@@ -1,4 +1,4 @@
-# {{ cookiecutter.project_name }}
+# Masonite {{ cookiecutter.project_name }}
 
 <p align="center">
 <img src="https://i.imgur.com/rEXcoMn.png" width="130px">
@@ -83,7 +83,7 @@ Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 ## License
 
 {% if cookiecutter.open_source_license == 'Not open source' -%}
-{{ cookiecutter.project_name}} is a closed-sourced software.
+Masonite {{ cookiecutter.project_name}} is a closed-sourced software.
 {% else %}
-{{ cookiecutter.project_name}} is open-sourced software licensed under the [{{ cookiecutter.open_source_license }}](LICENSE).
+Masonite {{ cookiecutter.project_name}} is open-sourced software licensed under the [{{ cookiecutter.open_source_license }}](LICENSE).
 {% endif %}

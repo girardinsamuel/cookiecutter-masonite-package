@@ -13,7 +13,7 @@ setup(
         "masonite.{{ cookiecutter.pkg_name }}.commands",
     ],
     package_dir={"": "src"},
-    description="{{ cookiecutter.project_name }}",
+    description="Masonite {{ cookiecutter.project_name }}",
     long_description="{{ cookiecutter.project_description }}",
     # The project's main homepage.
     url="{{ cookiecutter.repository }}",

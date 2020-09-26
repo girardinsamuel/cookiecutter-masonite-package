@@ -13,7 +13,7 @@ import os
 |
 """
 
-NAME = '{{cookiecutter.project_name}}'
+NAME = 'Masonite {{cookiecutter.project_name}}'
 
 """
 |--------------------------------------------------------------------------
