@@ -64,3 +64,23 @@ Check the Official Documentation on [creating packages](https://docs.masonitepro
 
 You can also create a package from a GitHub template repo [starter-package](https://github.com/MasoniteFramework/starter-package/generate) but you will have to
 name all your files manually and update all configuration files with your name, GitHub repository name and so on...
+
+## Setup coverage
+
+The repository is setup to use `Coveralls` to publish the package coverage.
+
+1. You just have to login/register [coveralls.io][https://coveralls.io/]
+2. Connect with Github provider and select your package repository
+3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings
+
+Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
+Coveralls and should display correctly at first coveralls score publish.
+
+Of course you can use `codecov` if you prefer, you will have to edit Github workflow and the badge.
+
+## Publish your package on PyPi
+
+To publish the package read the Official Documentation guide on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
+
+A Github workflow is already configure to publish the package to PyPi when
+a release is created.

@@ -66,7 +66,10 @@ setup(
     # for example:
     # $ pip install -e .[dev,test]
     # $ pip install your-package[dev,test]
-    extras_require={"test": ["coverage", "pytest"], "lint": ["black", "flake8"]},
+    extras_require={
+        "test": ["coverage", "pytest"],
+        "dev": ["black", "flake8", "twine>=1.5.0"]
+    },
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.

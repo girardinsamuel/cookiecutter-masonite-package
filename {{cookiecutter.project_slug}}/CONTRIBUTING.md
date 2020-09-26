@@ -2,7 +2,7 @@
 
 ## Introduction
 
-When contributing to this repository, **please first discuss the change you wish to make via issue, email, or any other method with the owners or contributors of this repository** before making a change 😃. Thank you !
+When contributing to this repository, **please first discuss the change you wish to make via issue, email, or any other method with the owners or contributors of this repository** before making a change 😃 . Thank you !
 
 ## Getting Started
 

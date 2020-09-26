@@ -24,7 +24,8 @@ coverage: ## Run package tests and upload coverage reports
 	python -m pytest --cov-report term --cov-report xml --cov=src/masonite/{{cookiecutter.pkg_name}} tests/
 	python -m coveralls
 publish: ## Publish package to pypi
-	pip install 'twine>=1.5.0'
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 	rm -fr build dist .egg masonite.egg-info
+pypirc: ## Copy the template .pypirc in the repo to your home directory
+	cp .pypirc ~/.pypirc
