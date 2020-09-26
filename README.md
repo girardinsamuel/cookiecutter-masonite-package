@@ -14,20 +14,21 @@ pip install -U cookiecutter
 ```
 
 Generate a Masonite package project:
+
 ```bash
 cookiecutter https://github.com/girardinsamuel/cookiecutter-masonite-package.git
 ```
 
-Then:
+## [Important] Package naming
 
-TODO: explain options
-
+TODO
 
 ## TODO
-* add tests to check generation
-* add badges
-* add linting
-* add versioning
+
+- add tests to check generation
+- add badges
+- add linting
+- add versioning
 
 ## How to contribute
 
