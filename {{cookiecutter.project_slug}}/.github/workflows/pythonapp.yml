@@ -18,9 +18,9 @@ jobs:
       - name: Install dependencies
         run: |
           make init
-      - name: Test with pytest
+      - name: Test with pytest and Build coverage
         run: |
-          make test
+          make coverage
   lint:
     runs-on: ubuntu-latest
     name: Lint
