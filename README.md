@@ -13,7 +13,7 @@ You can see a demo repository, to have an overview of the scaffolded package res
 ## Masonite Official Documentation
 
 First check the Official Documentation on [creating packages](https://docs.masoniteproject.com/advanced/creating-packages) !
-You can also creating a package from the Official Github template: [starter-package](https://github.com/MasoniteFramework/starter-package).
+You can also create a package from the Official Github template: [starter-package](https://github.com/MasoniteFramework/starter-package).
 
 ## Crafting the package
 
@@ -31,7 +31,7 @@ $ cookiecutter https://github.com/girardinsamuel/cookiecutter-masonite-package.g
 
 (_For cookiecutter CLI options, check directly [cookiecutter](https://github.com/cookiecutter/cookiecutter)_).
 
-**Masonite Package Naming Guidelines ⚠️ **
+**Masonite Package Naming Guidelines** ⚠️
 
 To have a consistent Masonite package ecosystem, it is advised to follow Masonite [Naming Guidelines](https://github.com/MasoniteFramework/starter-package).
 
