@@ -10,7 +10,7 @@ init: ## Install package dependencies
 	# install package
 	pip install .
 	# install dev dependencies (see setup.py)
-	pip install {{cookiecutter.project_slug}}[test,lint]
+	pip install {{cookiecutter.project_slug}}[test,dev]
 test: ## Run package tests
 	python -m pytest tests
 ci: ## [CI] Run package tests and lint
