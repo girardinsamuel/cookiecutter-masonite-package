@@ -69,7 +69,7 @@ name all your files manually and update all configuration files with your name, 
 
 The repository is setup to use `Coveralls` to publish the package coverage.
 
-1. You just have to login/register [coveralls.io](https://coveralls.io/).
+1. You just have to login/register at [coveralls.io](https://coveralls.io/).
 2. Connect with Github provider and select your package repository.
 3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings. (_check if correct method_)
 
