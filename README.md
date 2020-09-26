@@ -5,6 +5,11 @@
   <img src="https://pyup.io/repos/github/girardinsamuel/cookiecutter-masonite-package/shield.svg" class="badge-modal-trigger shield" data-toggle="tooltip" data-placement="top" title="" id="shield" data-original-title="show url">
 </p>
 
+## Demo
+
+You can see a demo repository, to have an overview of the scaffolded package result:
+[masonite-demo-package](https://github.com/girardinsamuel/masonite-demo-package)
+
 ## Quickstart
 
 Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.5.0 or higher:
