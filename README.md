@@ -25,7 +25,7 @@ Generate your Masonite package project and follow prompt options:
 cookiecutter https://github.com/girardinsamuel/cookiecutter-masonite-package.git
 ```
 
-_For more options, check directly [cookiecutter](https://github.com/cookiecutter/cookiecutter)_
+_For more options, check directly [cookiecutter](https://github.com/cookiecutter/cookiecutter)_.
 
 **⚠️ Package naming**
 
@@ -69,9 +69,9 @@ name all your files manually and update all configuration files with your name, 
 
 The repository is setup to use `Coveralls` to publish the package coverage.
 
-1. You just have to login/register [coveralls.io][https://coveralls.io/]
-2. Connect with Github provider and select your package repository
-3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings
+1. You just have to login/register [coveralls.io](https://coveralls.io/).
+2. Connect with Github provider and select your package repository.
+3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings. (_check if correct method_)
 
 Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
 Coveralls and should display correctly at first coveralls score publish.
