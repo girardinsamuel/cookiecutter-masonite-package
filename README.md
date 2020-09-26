@@ -98,12 +98,12 @@ Of course you can use `codecov` if you prefer, you will have to edit Github work
 
 **Publish your package on PyPi**
 
-To publish the package read the Official Documentation guide on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
+To publish the package read the Official Documentation on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
 
-A Github workflow is already configure to publish the package to PyPi when
+A Github workflow is already configured to publish the package to PyPi when
 a release is created. You just have to:
 
 1. Login/register on [pypi.io](https://pypi.io/).
-2. Add your credentials as Github secrets in this repository: `PYPI_USERNAME` and `PYPI_PASSWORD`
+2. Add your credentials as Github Secrets in this repository: `PYPI_USERNAME` and `PYPI_PASSWORD`
 
 More info in [Contributing Documentation](CONTRIBUTING.md).
