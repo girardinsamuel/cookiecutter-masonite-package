@@ -1,7 +1,6 @@
 # Cookiecutter Masonite package
 
 <p align="center">
-  <img src="https://pyup.io/repos/github/girardinsamuel/cookiecutter-masonite-package/python-3-shield.svg?t=1600644773859" class="badge-modal-trigger-py3 shield" data-toggle="tooltip" data-placement="top" title="show url" id="py3-shield">
   <img src="https://pyup.io/repos/github/girardinsamuel/cookiecutter-masonite-package/shield.svg" class="badge-modal-trigger shield" data-toggle="tooltip" data-placement="top" title="" id="shield" data-original-title="show url">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/girardinsamuel/cookiecutter-masonite-package">
   <img alt="GitHub" src="https://img.shields.io/github/license/girardinsamuel/cookiecutter-masonite-package">
