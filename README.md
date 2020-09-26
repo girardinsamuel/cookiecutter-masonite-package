@@ -86,11 +86,10 @@ $ python craft serve
 
 **Setup coverage**
 
-The repository is setup to use `Coveralls` to publish the package coverage.
+The repository is already setup to use `Coveralls` to publish the package coverage. You just need to:
 
-1. You just have to login/register at [coveralls.io](https://coveralls.io/).
-2. Connect with Github provider and select your package repository.
-3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings. (_check if correct method_)
+1. Login/register at [coveralls.io](https://coveralls.io/).
+2. Select your Github repository and enable coveralls.
 
 Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
 Coveralls and should display correctly at first coveralls score publish.
