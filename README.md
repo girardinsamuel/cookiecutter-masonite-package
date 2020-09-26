@@ -88,7 +88,7 @@ $ python craft serve
 
 The repository is already setup to use `Coveralls` to publish the package coverage. You just need to:
 
-1. Login/register at [coveralls.io](https://coveralls.io/).
+1. Login/register on [coveralls.io](https://coveralls.io/).
 2. Select your Github repository and enable coveralls.
 
 Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
@@ -101,6 +101,9 @@ Of course you can use `codecov` if you prefer, you will have to edit Github work
 To publish the package read the Official Documentation guide on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
 
 A Github workflow is already configure to publish the package to PyPi when
-a release is created.
+a release is created. You just have to:
+
+1. Login/register on [pypi.io](https://pypi.io/).
+2. Add your credentials as Github secrets in this repository: `PYPI_USERNAME` and `PYPI_PASSWORD`
 
 More info in [Contributing Documentation](CONTRIBUTING.md).
