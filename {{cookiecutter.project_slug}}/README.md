@@ -10,7 +10,8 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![codecov](https://codecov.io/gh/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/branch/master/graph/badge.svg)](https://codecov.io/gh/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}/)
 <img src="https://img.shields.io/badge/python-{{cookiecutter.python_min}}+-blue.svg" alt="Python Version">
-<a href="https://pypi.org/project/{{cookiecutter.project_slug}}/"><img alt="PyPI" src="https://img.shields.io/pypi/v/{{cookiecutter.project_slug}}"></a>
+
+[![PyPI version](https://badge.fury.io/py/{{cookiecutter.project_slug}}.svg)](https://badge.fury.io/py/{{cookiecutter.project_slug}})
 
 </p>
 
