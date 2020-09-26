@@ -18,23 +18,50 @@ Install the latest Cookiecutter if you haven't installed it yet (this requires C
 pip install -U cookiecutter
 ```
 
-Generate a Masonite package project:
+Generate your Masonite package project and follow prompt options:
 
 ```bash
 cookiecutter https://github.com/girardinsamuel/cookiecutter-masonite-package.git
 ```
 
-## [Important] Package naming
+**⚠️ Package naming**
 
-TODO
+To have a consistent Masonite package ecosystem, it is advised to follow auto naming provided by `cookiecutter`:
 
-## TODO
+- All packages should have a pip install name like `masonite-my-package`: masonite-api, masonite-events.
+- A package name should be `Masonite My Package`: Masonite API, Masonite Events... .
+- A package should be imported from `masonite` namespace:
 
-- add tests to check generation
-- add badges
-- add linting
-- add versioning
+```
+from masonite.api import X
+from masonite.events import Y
+from masonite.my_package import Z
+```
 
-## How to contribute
+When you are first prompted for the name of your package, enter the readable human name without `Masonite`:
 
-## Code of conduct
+```
+project_name [Package Name]: My Package
+```
+
+Then the following prompts should not require modifications:
+
+```
+project_slug [masonite-my-package]:
+project_description [Package description in one line displayed e.g. in README]:
+pkg_name [my_package]:
+[...]
+repository [https://github.com/girardinsamuel/masonite-my-package]:
+
+```
+
+## Masonite Official Documentation
+
+Check the Official Documentation on [creating packages](https://docs.masoniteproject.com/advanced/creating-packages) !
+
+You can also create a package from a GitHub template repo [starter-package](https://github.com/MasoniteFramework/starter-package/generate) but you will have to
+name all your files manually and update all configuration files with your name, GitHub repository name and so on...
+
+```
+
+```
