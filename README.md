@@ -12,7 +12,7 @@ You can see a demo repository, to have an overview of the scaffolded package res
 
 ## Quickstart
 
-Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.5.0 or higher:
+Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.5.0 or higher):
 
 ```bash
 pip install -U cookiecutter
@@ -23,6 +23,8 @@ Generate your Masonite package project and follow prompt options:
 ```bash
 cookiecutter https://github.com/girardinsamuel/cookiecutter-masonite-package.git
 ```
+
+(For more options, check directly [cookiecutter](https://github.com/cookiecutter/cookiecutter).)
 
 **⚠️ Package naming**
 
