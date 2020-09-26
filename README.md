@@ -61,7 +61,3 @@ Check the Official Documentation on [creating packages](https://docs.masonitepro
 
 You can also create a package from a GitHub template repo [starter-package](https://github.com/MasoniteFramework/starter-package/generate) but you will have to
 name all your files manually and update all configuration files with your name, GitHub repository name and so on...
-
-```
-
-```
