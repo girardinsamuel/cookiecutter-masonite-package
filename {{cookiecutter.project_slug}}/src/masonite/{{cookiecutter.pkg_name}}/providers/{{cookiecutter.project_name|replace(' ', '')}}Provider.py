@@ -1,7 +1,7 @@
 """A {{cookiecutter.project_name|replace(' ', '')}}Provider Service Provider."""
 
 from masonite.provider import ServiceProvider
-from masonite.{{cookiecutter.project_slug}}.commands.InstallCommand import InstallCommand
+from masonite.{{cookiecutter.pkg_name}}.commands.InstallCommand import InstallCommand
 
 
 class {{cookiecutter.project_name|replace(' ', '')}}Provider(ServiceProvider):

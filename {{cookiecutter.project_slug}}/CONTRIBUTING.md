@@ -59,6 +59,10 @@ make init
 
 ## Dev Guidelines
 
+### Package development
+
+You should read guidelines on package creation in the [Official Documentation](https://docs.masoniteproject.com/advanced/creating-packages)
+
 ### Comments
 
 Comments are a vital part of any repository and should be used where needed. It is important not to overcomment something. If you find you need to constantly add comments, you're code may be too complex. Code should be self documenting \(with clearly defined variable and method names\)
@@ -111,16 +115,16 @@ perform_some_complex_task()
 Flag pole comments are a fantastic way to give developers an inside to what is really happening and for now should only be reserved for configuration files. A flag pole comment gets its name from how the comment looks
 
 ```text
-'''
+"""
 |--------------------------------------------------------------------------
 | A Heading of The Setting Being Set
 |--------------------------------------------------------------------------
 |
 | A quick description
 |
-'''
+"""
 
-SETTING = 'some value'
+SETTING = "some value"
 ```
 
 It's important to note that there should have exactly 75 `-` above and below the header and have a trailing `|` at the bottom of the comment.

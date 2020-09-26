@@ -10,8 +10,13 @@
   "version": "0.0.1",
   "repository": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
   "python_min": "3.5",
-  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-  "_copy_without_render": [
-    ".github/*"
-  ]
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ],
+  "_copy_without_render": [".github/*"]
 }
