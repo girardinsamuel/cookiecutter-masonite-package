@@ -3,7 +3,7 @@ binaryornot
 
 # Testing
 # ------------------------------------------------------------------------------
-pytest
+pytest==6.1.0
 pytest-cookies==0.5.1
 pytest-instafail==0.4.2
 pyyaml==5.3.1
