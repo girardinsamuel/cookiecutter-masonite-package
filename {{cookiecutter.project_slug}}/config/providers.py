@@ -16,6 +16,7 @@ from masonite.providers import (
     CacheProvider,
     CsrfProvider,
 )
+from masonite.{{cookiecutter.pkg_name}} import  {{cookiecutter.project_name|replace(' ', '')}}Provider
 
 """
 |--------------------------------------------------------------------------
@@ -52,6 +53,7 @@ PROVIDERS = [
     # HelpersProvider,
 
     # Third Party Providers
+    {{cookiecutter.project_name|replace(' ', '')}}Provider,
 
     # Application Providers
 

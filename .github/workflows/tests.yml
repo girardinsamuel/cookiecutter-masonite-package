@@ -17,23 +17,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          make init
-      - name: Test with pytest and Build coverage
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pip install -r requirements.txt
+      - name: Test with pytest
         run: |
-          make coverage
-  lint:
-    runs-on: ubuntu-latest
-    name: Lint
-    steps:
-      - uses: actions/checkout@v1
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.6
-      - name: Intall Flake8
-        run: |
-          pip install flake8
-      - name: Lint
-        run: make lint
+          python -m pytest tests
