@@ -4,7 +4,7 @@ binaryornot
 # Testing
 # ------------------------------------------------------------------------------
 pytest
-pytest-cookies
+pytest-cookies==0.5.1
 pytest-instafail==0.4.2
 pyyaml==5.3.1
 masonite==2.3.18
