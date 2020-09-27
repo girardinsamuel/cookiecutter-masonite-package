@@ -6,6 +6,7 @@ binaryornot
 pytest
 pytest-cookies
 pytest-instafail==0.4.2
-pyyaml
-masonite
+pyyaml==5.3.1
+masonite==2.3.18
 flake8
+black==20.8b1
