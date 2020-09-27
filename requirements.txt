@@ -5,7 +5,7 @@ binaryornot
 # ------------------------------------------------------------------------------
 pytest
 pytest-cookies
-pytest-instafail
+pytest-instafail==0.4.2
 pyyaml
 masonite
 flake8
