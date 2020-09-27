@@ -1,0 +1,1 @@
+include src/masonite/{{cookiecutter.pkg_name}}/config/{{cookiecutter.pkg_name}}.py

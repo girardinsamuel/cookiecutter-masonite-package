@@ -60,7 +60,7 @@ PROVIDERS = [
 ]
 ```
 
-Then install OR publish the reqired package files (configuration, views ...):
+Then install OR publish the required package files (configuration, views ...):
 
 ```bash
 python craft {{cookiecutter.pkg_name}}:install
