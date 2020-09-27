@@ -1,5 +1,8 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name="{{ cookiecutter.project_slug }}",
     # Versions should comply with PEP440.  For a discussion on single-sourcing
@@ -13,8 +16,9 @@ setup(
         "masonite.{{ cookiecutter.pkg_name }}.commands",
     ],
     package_dir={"": "src"},
-    description="Masonite {{ cookiecutter.project_name }}",
-    long_description="{{ cookiecutter.project_description }}",
+    description="{{ cookiecutter.project_description }}",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     # The project's main homepage.
     url="{{ cookiecutter.repository }}",
     # Author details
