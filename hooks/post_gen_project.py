@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import pdb
 
 TERMINATOR = "\x1b[0m"
 WARNING = "\x1b[1;33m [WARNING]: "
@@ -17,7 +18,4 @@ def remove_file(filepath):
 if 'Not open source' == '{{ cookiecutter.open_source_license }}':
     remove_file('LICENSE')
 
-# Add Service Provider if masonite globally available
-# print("""You should now run:\n* python craft provider {{ cookiecutter.project_name|replace(' ', '') }}
-# \n* move it to src/masonite/{{cookiecutter.pkg_name}}/providers\n""")
 print(SUCCESS+"Your package is ready to be developed ! => cd {{cookiecutter.project_slug}}/"+TERMINATOR)
