@@ -7,5 +7,6 @@ pytest
 pytest-cookies
 pytest-instafail
 pyyaml==5.3.1
-masonite
+masonite==2.3.18
 flake8
+black==20.8b1
