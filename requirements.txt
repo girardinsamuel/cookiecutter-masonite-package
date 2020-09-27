@@ -6,6 +6,6 @@ binaryornot
 pytest
 pytest-cookies
 pytest-instafail
-pyyaml
+pyyaml==5.3.1
 masonite
 flake8
