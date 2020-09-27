@@ -9,3 +9,4 @@ pytest-instafail
 pyyaml
 masonite
 flake8
+black
