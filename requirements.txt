@@ -1,0 +1,11 @@
+cookiecutter
+binaryornot
+
+# Testing
+# ------------------------------------------------------------------------------
+pytest
+pytest-cookies
+pytest-instafail
+pyyaml
+masonite
+flake8
