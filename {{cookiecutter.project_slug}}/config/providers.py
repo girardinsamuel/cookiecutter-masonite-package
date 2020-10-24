@@ -16,6 +16,8 @@ from masonite.providers import (
     CacheProvider,
     CsrfProvider,
 )
+from masoniteorm.providers.ORMProvider import ORMProvider
+
 from masonite.{{cookiecutter.pkg_name}} import  {{cookiecutter.project_name|replace(' ', '')}}Provider
 
 """
@@ -34,27 +36,27 @@ from masonite.{{cookiecutter.pkg_name}} import  {{cookiecutter.project_name|repl
 PROVIDERS = [
     # Framework Providers
     AppProvider,
-    AuthenticationProvider,
     SessionProvider,
     RouteProvider,
     StatusCodeProvider,
-    # WhitenoiseProvider,
+    WhitenoiseProvider,
     ViewProvider,
+    AuthenticationProvider,
+    ORMProvider,
 
     # Optional Framework Providers
-    # SassProvider,
-    # MailProvider,
-    # UploadProvider,
-    # QueueProvider,
-    # CacheProvider,
-    # BroadcastProvider,
-    # CacheProvider,
+    MailProvider,
+    UploadProvider,
+    QueueProvider,
+    CacheProvider,
+    BroadcastProvider,
+    CacheProvider,
     CsrfProvider,
-    # HelpersProvider,
+    HelpersProvider,
 
     # Third Party Providers
     {{cookiecutter.project_name|replace(' ', '')}}Provider,
 
-    # Application Providers
+    # Application Provider
 
 ]
