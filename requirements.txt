@@ -7,6 +7,6 @@ pytest==6.1.1
 pytest-cookies==0.5.1
 pytest-instafail==0.4.2
 pyyaml==5.3.1
-masonite==2.3.19
+masonite==2.3.20
 flake8==3.8.4
 black==20.8b1
