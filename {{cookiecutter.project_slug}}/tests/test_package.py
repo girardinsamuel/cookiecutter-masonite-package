@@ -4,6 +4,8 @@ from masonite.routes import Get
 
 class Test{{cookiecutter.project_name|replace(' ', '')}}(TestCase):
 
+    sqlite = False
+
     def setUp(self):
         super().setUp()
         self.routes(only=[

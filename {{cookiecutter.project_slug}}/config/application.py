@@ -1,6 +1,7 @@
 """ Application Settings """
 
 import os
+from masonite import env
 
 """
 |--------------------------------------------------------------------------
@@ -13,7 +14,7 @@ import os
 |
 """
 
-NAME = 'Masonite {{cookiecutter.project_name}}'
+NAME = env('APP_NAME', 'Masonite {{cookiecutter.project_name}}')
 
 """
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ NAME = 'Masonite {{cookiecutter.project_name}}'
 |
 """
 
-DEBUG = os.getenv('APP_DEBUG', False)
+DEBUG = os.getenv('APP_DEBUG', True)
 
 """
 |--------------------------------------------------------------------------
@@ -40,7 +41,7 @@ DEBUG = os.getenv('APP_DEBUG', False)
 |
 """
 
-KEY = os.getenv('KEY', 'wzWfd04IxEjyoyNHN9M-pizOO4TYOnWUoxBqjO61FCA=')
+KEY = env('KEY', 'mQhQtBZP-WmaJl5FpW2dC0vpnYs2ms1u5AIVqDM8s6w=')
 
 """
 |--------------------------------------------------------------------------
@@ -51,7 +52,7 @@ KEY = os.getenv('KEY', 'wzWfd04IxEjyoyNHN9M-pizOO4TYOnWUoxBqjO61FCA=')
 |
 """
 
-URL = 'http://localhost:8000'
+URL = env('APP_URL', 'http://localhost:8000')
 
 """
 |--------------------------------------------------------------------------
@@ -80,7 +81,7 @@ STATIC_ROOT = os.path.join(BASE_DIRECTORY, 'storage')
 | Autoload Directories
 |--------------------------------------------------------------------------
 |
-| List of directories that are used to find classes and autoload them into 
+| List of directories that are used to find classes and autoload them into
 | the Service Container. This is initially used to find models and load
 | them in but feel free to autoload any directories
 |
