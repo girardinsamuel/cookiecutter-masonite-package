@@ -3,7 +3,7 @@ binaryornot
 
 # Testing
 # ------------------------------------------------------------------------------
-pytest==5.4.2
+pytest==6.2.2
 pytest-cookies
 pytest-instafail
 masonite>=3.0<4.0
