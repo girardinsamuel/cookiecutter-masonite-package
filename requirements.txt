@@ -8,7 +8,7 @@ pytest-cookies
 pytest-instafail
 masonite>=3.0<4.0
 masonite-logging==1.0.1
-masonite-validation
+masonite-validation==3.0.12
 pyyaml==5.4.1
 flake8==3.8.4
 black==20.8b1
