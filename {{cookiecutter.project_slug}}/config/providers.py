@@ -17,8 +17,8 @@ from masonite.providers import (
     ViewProvider,
     WhitenoiseProvider,
 )
-from masonite.logging.providers import LoggingProvider
-from masonite.validation.providers import ValidationProvider
+# from masonite.logging.providers import LoggingProvider
+# from masonite.validation.providers import ValidationProvider
 from masoniteorm.providers import ORMProvider
 
 from masonite.{{cookiecutter.pkg_name}} import {{cookiecutter.project_name|replace(' ', '')}}Provider
@@ -49,10 +49,9 @@ PROVIDERS = [
     CacheProvider,
     BroadcastProvider,
     HelpersProvider,
-    ValidationProvider,
     # Third Party Providers
-    LoggingProvider,
-    ValidationProvider,
+    # LoggingProvider,
+    # ValidationProvider,
     ORMProvider,
     {{cookiecutter.project_name|replace(' ', '')}}Provider,
     # Application Providers
