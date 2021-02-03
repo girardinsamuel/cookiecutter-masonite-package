@@ -1,16 +1,25 @@
-"""Database Settings """
-from masonite import env
+""" Database Settings """
+
+import os
+
+from masonite.environment import LoadEnvironment, env
 from masoniteorm.query import QueryBuilder
 from masoniteorm.connections import ConnectionResolver
 
-
 """
 |--------------------------------------------------------------------------
-| Databases connectors details
+| Load Environment Variables
 |--------------------------------------------------------------------------
 |
-| Setup details of the database connectors you want to use.
+| Loads in the environment variables when this page is imported.
 |
+"""
+
+LoadEnvironment()
+
+"""
+The connections here don't determine the database but determine the "connection".
+They can be named whatever you want.
 """
 
 DATABASES = {
@@ -54,6 +63,4 @@ DATABASES = {
     },
 }
 
-ConnectionResolver().set_connection_details(DATABASES)
-
-DB = QueryBuilder(connection_details=DATABASES)
+DB = ConnectionResolver().set_connection_details(DATABASES)
