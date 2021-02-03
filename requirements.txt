@@ -4,8 +4,6 @@ binaryornot
 # Testing
 # ------------------------------------------------------------------------------
 pytest==6.2.2
-pytest-cookies==0.5.1
-pytest-instafail==0.4.2
 masonite>=3.0<4.0
 pyyaml==5.4.1
 flake8==3.8.4
