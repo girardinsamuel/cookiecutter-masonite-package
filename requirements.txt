@@ -1,4 +1,4 @@
-cookiecutter
+cookiecutter==1.7.2
 binaryornot
 
 # Testing
