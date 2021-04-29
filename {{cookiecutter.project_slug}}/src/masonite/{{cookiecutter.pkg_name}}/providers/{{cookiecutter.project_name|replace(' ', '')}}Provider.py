@@ -12,7 +12,7 @@ class {{cookiecutter.project_name|replace(' ', '')}}Provider(Provider):
 
     def register(self):
         """Register objects into the Service Container."""
-        self.app.make("commands").add(InstallCommand())
+        self.application.make("commands").add(InstallCommand())
 
     def boot(self):
         """Boots services required by the container."""

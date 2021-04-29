@@ -16,7 +16,8 @@ from masonite.providers import (
 )
 from masoniteorm.providers import ORMProvider
 
-from masonite.{{cookiecutter.pkg_name}} import {{cookiecutter.project_name|replace(' ', '')}}Provider
+# register local package
+from src.masonite.{{cookiecutter.pkg_name}} import {{cookiecutter.project_name|replace(' ', '')}}Provider
 
 PROVIDERS = [
     FrameworkProvider,
