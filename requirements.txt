@@ -6,9 +6,10 @@ binaryornot==0.4.4
 pytest-cookies
 pytest==6.2.3
 pytest-instafail==0.4.2
-masonite>=3.0<4.0
-masonite-validation==3.0.14
-masonite-logging==1.0.1
+# masonite>=4.0<5.0 : TODO uncomment when released
+git+https://github.com/MasoniteFramework/masonite4@fix/running-tests
+git+https://github.com/girardinsamuel/orm@update/masonite-4
+
 pyyaml==5.4.1
 flake8==3.9.1
 black==21.4b2

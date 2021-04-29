@@ -4,10 +4,11 @@ You can run this seeder in order to generate users.
     - All users have the password of 'secret'.
     - You can run the seeder by running: craft seed:run.
 """
-
+import random
 from masoniteorm.seeds import Seeder
 
-from app.User import User
+from ...app.User import User
+from ...app.Profile import Profile
 from config.factories import factory
 
 
@@ -16,4 +17,12 @@ class UserTableSeeder(Seeder):
         """
         Run the database seeds.
         """
-        factory(User, 50).create()
+        users = factory(User, 50).create()
+        for u in User.all():
+            Profile.create(
+                {
+                    "user_id": u.id,
+                    "role": random.choice(["admin", "basic"]),
+                    "avatar": f"https://randomuser.me/api/portraits/men/{u.id}.jpg",
+                }
+            )

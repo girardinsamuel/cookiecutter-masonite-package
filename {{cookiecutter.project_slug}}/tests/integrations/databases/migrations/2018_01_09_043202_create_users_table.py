@@ -9,8 +9,11 @@ class CreateUsersTable(Migration):
             table.string("name")
             table.string("email").unique()
             table.string("password")
+            table.boolean("verified")
             table.string("remember_token").nullable()
             table.timestamp("verified_at").nullable()
+            table.string("avatar").nullable()
+            table.soft_deletes()
             table.timestamps()
 
     def down(self):

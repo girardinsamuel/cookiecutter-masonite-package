@@ -18,7 +18,10 @@ shutil.rmtree("../masonite-demo-package/.github/", ignore_errors=True)
 # Get template to use
 options = sys.argv
 tag = None
-template = 'https://github.com/girardinsamuel/cookiecutter-masonite-package.git'
+template = "https://github.com/girardinsamuel/cookiecutter-masonite-package.git"
+import pdb
+
+pdb.set_trace()
 if len(options) == 2:
     tag = options[1]
 
@@ -32,8 +35,8 @@ cookiecutter(
     checkout=tag,
     extra_context={
         "project_name": "Demo Package",
-        "project_description": project_description
-    }
+        "project_description": project_description,
+    },
 )
 
 os.chdir("../masonite-demo-package")

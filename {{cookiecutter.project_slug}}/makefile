@@ -7,10 +7,8 @@ init: ## Install package dependencies
 	pip install --upgrade pip
 	# install test project and package dependencies
 	pip install -r requirements.txt
-	# install package
-	pip install .
-	# install dev dependencies (see setup.py)
-	pip install {{cookiecutter.project_slug}}[test,dev]
+	# install package and dev dependencies (see setup.py)
+	pip install '.[dev]'
 test: ## Run package tests
 	python -m pytest tests
 ci: ## [CI] Run package tests and lint
