@@ -1,1 +1,1 @@
-masonite>=3.0<4.0
+masonite>=4.0<5.0
