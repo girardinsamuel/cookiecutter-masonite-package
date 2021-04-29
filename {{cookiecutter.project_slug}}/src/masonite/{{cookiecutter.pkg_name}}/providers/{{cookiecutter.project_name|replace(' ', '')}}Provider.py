@@ -7,6 +7,9 @@ from masonite.{{cookiecutter.pkg_name}}.commands.InstallCommand import InstallCo
 class {{cookiecutter.project_name|replace(' ', '')}}Provider(Provider):
     """Provides Services To The Service Container."""
 
+    def __init__(self, app):
+        self.application = app
+
     def register(self):
         """Register objects into the Service Container."""
         self.app.make("commands").add(InstallCommand())

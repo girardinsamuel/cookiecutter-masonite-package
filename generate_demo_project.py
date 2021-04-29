@@ -19,9 +19,7 @@ shutil.rmtree("../masonite-demo-package/.github/", ignore_errors=True)
 options = sys.argv
 tag = None
 template = "https://github.com/girardinsamuel/cookiecutter-masonite-package.git"
-import pdb
 
-pdb.set_trace()
 if len(options) == 2:
     tag = options[1]
 
