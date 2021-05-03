@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-import urllib
+from requests.utils import requote_uri
 
 TERMINATOR = "\x1b[0m"
 WARNING = "\x1b[1;33m [WARNING]: "
@@ -20,12 +20,12 @@ def remove_file(filepath):
 if "Not open source" == "{{ cookiecutter.open_source_license }}":
     remove_file("LICENSE")
 
+# Generate Beyond code banner with https://banners.beyondco.de in README header
 pip_name = "{{ cookiecutter.project_slug }}"
 package_name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_description }}"
-package_name_encoded = urllib.parse.quote(package_name)
-description_encoded = urllib.parse.quote(description)
-
+package_name_encoded = requote_uri(package_name)
+description_encoded = requote_uri(description)
 line = f"""<p align="center">
     <img src="https://banners.beyondco.de/{package_name_encoded}.png?theme=light&packageManager=pip+install&packageName={pip_name}&pattern=floorTile&style=style_1&description={description_encoded}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
 </p>
