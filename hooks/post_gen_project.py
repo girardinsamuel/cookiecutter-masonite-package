@@ -26,8 +26,9 @@ package_name = "{{ cookiecutter.project_name }}"
 description = "{{ cookiecutter.project_description }}"
 package_name_encoded = requote_uri(package_name)
 description_encoded = requote_uri(description)
+pattern = "topography"
 line = f"""<p align="center">
-    <img src="https://banners.beyondco.de/{package_name_encoded}.png?theme=light&packageManager=pip+install&packageName={pip_name}&pattern=floorTile&style=style_1&description={description_encoded}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
+    <img src="https://banners.beyondco.de/{package_name_encoded}.png?theme=light&packageManager=pip+install&packageName={pip_name}&pattern={pattern}&style=style_1&description={description_encoded}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
 </p>
 """
 with open(os.path.join(PROJECT_DIRECTORY, "README.md"), "r+") as f:
