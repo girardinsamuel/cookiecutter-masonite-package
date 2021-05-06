@@ -12,4 +12,4 @@ git+https://github.com/girardinsamuel/orm@update/masonite-4
 
 pyyaml==5.4.1
 flake8==3.9.1
-black==21.4b2
+black==21.5b0
