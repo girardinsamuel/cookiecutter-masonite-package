@@ -14,6 +14,16 @@ updates:
     labels:
       - "configuration"
 
+  # Maintain dependencies for GitHub Actions for generated project
+  - package-ecosystem: "github-actions"
+    directory: "{{cookiecutter.project_slug}}/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "girardinsamuel"
+    labels:
+      - "configuration"
+
   # Maintain dependencies for cookiecutter repo
   - package-ecosystem: "pip"
     directory: "/"
