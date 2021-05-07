@@ -7,8 +7,9 @@ pytest-cookies
 pytest==6.2.3
 pytest-instafail==0.4.2
 # masonite>=4.0<5.0 : TODO uncomment when released
-git+https://github.com/MasoniteFramework/masonite4@fix/running-tests
+git+https://github.com/MasoniteFramework/masonite4
 git+https://github.com/girardinsamuel/orm@update/masonite-4
+cryptography
 
 pyyaml==5.4.1
 flake8==3.9.1
