@@ -15,12 +15,11 @@ ci: ## [CI] Run package tests and lint
 	make test
 	make lint
 lint: ## Run code linting
-	python -m flake8 src/masonite/{{cookiecutter.pkg_name}}/ --ignore=E501,F401,E128,E402,E731,F821,E712,W503
+	python -m flake8 .
 format: ## Format code with Black
-	black src/masonite/{{cookiecutter.pkg_name}}
+	black .
 coverage: ## Run package tests and upload coverage reports
 	python -m pytest --cov-report term --cov-report xml --cov=src/masonite/{{cookiecutter.pkg_name}} tests
-	python -m coveralls
 publish: ## Publish package to pypi
 	python setup.py sdist bdist_wheel
 	twine upload dist/*

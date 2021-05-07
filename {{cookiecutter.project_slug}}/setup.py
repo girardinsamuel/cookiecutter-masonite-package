@@ -78,7 +78,6 @@ setup(
             "coverage",
             "pytest",
             "pytest-cov",
-            "coveralls",
             "twine>=1.5.0",
             "wheel",
         ],
