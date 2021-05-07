@@ -36,19 +36,27 @@ class Kernel:
         LoadEnvironment()
 
     def register_routes(self):
-        Route.set_controller_module_location(self.application.make("controller.location"))
+        Route.set_controller_module_location(
+            self.application.make("controller.location")
+        )
 
         self.application.bind("routes.web", "tests.integrations.web")
 
         self.application.make("router").add(
-            Route.group(load_routes(self.application.make("routes.web")), middleware="web")
+            Route.group(
+                load_routes(self.application.make("routes.web")), middleware="web"
+            )
         )
 
     def register_middleware(self):
-        self.application.make("middleware").add(self.route_middleware).add(self.http_middleware)
+        self.application.make("middleware").add(self.route_middleware).add(
+            self.http_middleware
+        )
 
     def register_configurations(self):
-        self.application.bind("config.application", "tests.integrations.config.application")
+        self.application.bind(
+            "config.application", "tests.integrations.config.application"
+        )
         self.application.bind("config.mail", "tests.integrations.config.mail")
         self.application.bind("config.session", "tests.integrations.config.session")
         self.application.bind("config.queue", "tests.integrations.config.queue")
@@ -57,7 +65,9 @@ class Kernel:
         self.application.bind("config.cache", "tests.integrations.config.cache")
         self.application.bind("config.broadcast", "tests.integrations.config.broadcast")
         self.application.bind("config.auth", "tests.integrations.config.auth")
-        self.application.bind("config.filesystem", "tests.integrations.config.filesystem")
+        self.application.bind(
+            "config.filesystem", "tests.integrations.config.filesystem"
+        )
 
         self.application.bind("base_url", "http://localhost:8000")
 
@@ -81,11 +91,15 @@ class Kernel:
         self.application.bind(
             "builder",
             QueryBuilder(
-                connection_details=load(self.application.make("config.database")).DATABASES
+                connection_details=load(
+                    self.application.make("config.database")
+                ).DATABASES
             ),
         )
 
-        self.application.bind("migrations.location", "tests/integrations/databases/migrations")
+        self.application.bind(
+            "migrations.location", "tests/integrations/databases/migrations"
+        )
         self.application.bind("seeds.location", "tests/integrations/databases/seeds")
 
         from config.database import DB
@@ -106,4 +120,6 @@ class Kernel:
         self.application.bind("storage_capsule", storage)
 
         self.application.set_response_handler(response_handler)
-        self.application.use_storage_path(os.path.join(self.application.base_path, "storage"))
+        self.application.use_storage_path(
+            os.path.join(self.application.base_path, "storage")
+        )
