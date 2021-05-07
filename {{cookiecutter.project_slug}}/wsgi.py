@@ -1,13 +1,14 @@
-from masonite.foundation import Application, Kernel, HttpKernel
+from masonite.foundation import Application, Kernel
 from tests.integrations.config.providers import PROVIDERS
+from tests.integrations.app.Kernel import Kernel as ApplicationKernel
 import os
 
 
+"""Start The Application Instance."""
 application = Application(os.getcwd())
 
-"""First Bind important providers needed to start the server
-"""
+"""Now Bind important providers needed to make the framework work."""
+application.register_providers(Kernel, ApplicationKernel)
 
-application.register_providers(Kernel, HttpKernel)
-
+"""Now Bind important application specific providers needed to make the application work."""
 application.add_providers(*PROVIDERS)
