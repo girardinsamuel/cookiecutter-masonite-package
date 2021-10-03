@@ -1,7 +1,7 @@
 # Cookiecutter Masonite Package
 
 <p align="center">
-  <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/girardinsamuel/cookiecutter-masonite-package/Test%20Application/master">
+  <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/girardinsamuel/cookiecutter-masonite-package/Test%20Application">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/girardinsamuel/cookiecutter-masonite-package">
   <img alt="GitHub" src="https://img.shields.io/github/license/girardinsamuel/cookiecutter-masonite-package">
 </p>
