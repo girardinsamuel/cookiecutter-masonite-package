@@ -1,7 +1,7 @@
 # Masonite {{ cookiecutter.project_name }}
 
 <p align="center">
-<img src="https://i.imgur.com/rEXcoMn.png" width="130px">
+    <img src="https://banners.beyondco.de/Masonite%20{{ cookiecutter.project_name }}.png?theme=light&packageManager=pip+install&packageName={{ cookiecutter.project_slug }}&pattern=topography&style=style_1&description={{ cookiecutter.project_description }}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
 </p>
 
 <p align="center">
