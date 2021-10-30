@@ -1,6 +1,6 @@
 cookiecutter
 binaryornot
-pyyaml
+pyyaml==6.0
 flake8
 black
 
