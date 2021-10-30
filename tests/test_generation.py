@@ -105,7 +105,9 @@ def test_invalid_project_slug_if_no_pip_installable(cookies, context, slug):
     assert isinstance(result.exception, FailedHookException)
 
 
-@pytest.mark.parametrize("slug", ["project-slug", "project", "project_slug", "project-masonite"])
+@pytest.mark.parametrize(
+    "slug", ["project-slug", "project", "project_slug", "project-masonite"]
+)
 def test_invalid_project_slug_if_no_masonite_namespace(cookies, context, slug):
     """Invalid slug should failed pre-generation hook."""
     context.update({"project_slug": slug})
@@ -122,7 +124,9 @@ def test_package_names_are_valid(cookies, context, pkg):
     assert result.exit_code == 0
 
 
-@pytest.mark.parametrize("pkg", ["project slug", "Project_Slug", "project-slug", "project.slug"])
+@pytest.mark.parametrize(
+    "pkg", ["project slug", "Project_Slug", "project-slug", "project.slug"]
+)
 def test_invalid_package_name_if_not_python_importable(cookies, context, pkg):
     """Invalid package should failed pre-generation hook."""
     context.update({"pkg_name": pkg})
@@ -131,7 +135,9 @@ def test_invalid_package_name_if_not_python_importable(cookies, context, pkg):
     assert isinstance(result.exception, FailedHookException)
 
 
-@pytest.mark.parametrize("pkg", ["masonite_project", "masoniteproject", "package_masonite"])
+@pytest.mark.parametrize(
+    "pkg", ["masonite_project", "masoniteproject", "package_masonite"]
+)
 def test_invalid_package_name_if_contains_masonite(cookies, context, pkg):
     """Invalid package should failed pre-generation hook."""
     context.update({"pkg_name": pkg})
@@ -159,9 +165,10 @@ def test_generation_and_run_tests(cookies, context):
     result = cookies.bake(extra_context=context)
     assert result.exit_code == 0
     assert result.project.isdir()
-    run_inside_dir('cp .env-example .env', str(result.project)) == 0
-    run_inside_dir('pip install .', str(result.project)) == 0
-    run_inside_dir('python -m pytest tests', str(result.project)) == 0
+    run_inside_dir("cp .env-example .env", str(result.project)) == 0
+    run_inside_dir("pip install -r requirements.txt", str(result.project)) == 0
+    run_inside_dir("pip install .", str(result.project)) == 0
+    run_inside_dir("python -m pytest tests", str(result.project)) == 0
 
 
 def test_flake8_passes(cookies, context):
@@ -192,6 +199,6 @@ def test_can_import_package_in_masonite_namespace(cookies, context):
     for now only packages sources (src/*)"""
     result = cookies.bake(extra_context=context)
 
-    test_command = "import masonite.{0}".format(context['pkg_name'])
+    test_command = "import masonite.{0}".format(context["pkg_name"])
     run_inside_dir("python -c '{0}'".format(test_command), str(result.project))
     assert result is not None

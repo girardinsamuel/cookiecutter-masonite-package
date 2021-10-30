@@ -78,6 +78,10 @@ _Explain how to use your package_
 
 Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 
+## Maintainers
+
+- [{{ cookiecutter.full_name }}](https://www.github.com/{{ cookiecutter.github_username }})
+
 ## License
 
 {% if cookiecutter.open_source_license == 'Not open source' -%}
