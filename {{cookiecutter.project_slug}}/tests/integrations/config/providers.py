@@ -14,6 +14,7 @@ from masonite.providers import (
     BroadcastProvider,
     AuthenticationProvider,
     HashServiceProvider,
+    ValidationProvider
 )
 from masonite.scheduling.providers import ScheduleProvider
 from masonite.notification.providers import NotificationProvider
