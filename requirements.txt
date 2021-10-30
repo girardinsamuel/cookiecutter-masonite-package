@@ -1,5 +1,5 @@
 cookiecutter
-binaryornot
+binaryornot==0.4.4
 pyyaml
 flake8
 black
