@@ -13,7 +13,10 @@ from masonite.providers import (
     HelpersProvider,
     BroadcastProvider,
     AuthenticationProvider,
+    HashServiceProvider,
 )
+from masonite.scheduling.providers import ScheduleProvider
+from masonite.notification.providers import NotificationProvider
 from masoniteorm.providers import ORMProvider
 
 # register local package
@@ -27,13 +30,17 @@ PROVIDERS = [
     WhitenoiseProvider,
     ExceptionProvider,
     MailProvider,
+    NotificationProvider,
     SessionProvider,
     CacheProvider,
     QueueProvider,
+    ScheduleProvider,
     EventProvider,
     StorageProvider,
     BroadcastProvider,
+    HashServiceProvider,
     AuthenticationProvider,
+    ValidationProvider,
     ORMProvider,
     {{cookiecutter.project_name|replace(' ', '')}}Provider,
 ]

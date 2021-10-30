@@ -12,6 +12,7 @@ setup(
     packages=[
         "masonite.{{ cookiecutter.pkg_name }}",
         "masonite.{{ cookiecutter.pkg_name }}.providers",
+        "masonite.{{ cookiecutter.pkg_name }}.config",
         "masonite.{{ cookiecutter.pkg_name }}.controllers",
         "masonite.{{ cookiecutter.pkg_name }}.commands",
     ],
@@ -62,10 +63,7 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=[
-        # TODO: uncomment when released
-        # "masonite>=4.0<5.0"
-    ],
+    install_requires=["masonite>=4.0<5.0"],
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
     # for example:
