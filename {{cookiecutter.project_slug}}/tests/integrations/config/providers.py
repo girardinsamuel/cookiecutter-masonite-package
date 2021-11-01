@@ -14,7 +14,8 @@ from masonite.providers import (
     BroadcastProvider,
     AuthenticationProvider,
     HashServiceProvider,
-    ValidationProvider
+    ValidationProvider,
+    AuthorizationProvider,
 )
 from masonite.scheduling.providers import ScheduleProvider
 from masonite.notification.providers import NotificationProvider
@@ -41,6 +42,7 @@ PROVIDERS = [
     BroadcastProvider,
     HashServiceProvider,
     AuthenticationProvider,
+    AuthorizationProvider,
     ValidationProvider,
     ORMProvider,
     {{cookiecutter.project_name|replace(' ', '')}}Provider,
