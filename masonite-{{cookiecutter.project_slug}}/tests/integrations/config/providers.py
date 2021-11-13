@@ -14,14 +14,15 @@ from masonite.providers import (
     BroadcastProvider,
     AuthenticationProvider,
     HashServiceProvider,
-    ValidationProvider
+    ValidationProvider,
+    AuthorizationProvider
 )
 from masonite.scheduling.providers import ScheduleProvider
 from masonite.notification.providers import NotificationProvider
 from masoniteorm.providers import ORMProvider
 
 # register local package
-from src.masonite.{{cookiecutter.pkg_name}} import {{cookiecutter.project_name|replace(' ', '')}}Provider
+from src.{{cookiecutter.pkg_name}} import {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider
 
 PROVIDERS = [
     FrameworkProvider,
@@ -41,7 +42,8 @@ PROVIDERS = [
     BroadcastProvider,
     HashServiceProvider,
     AuthenticationProvider,
+    AuthorizationProvider,
     ValidationProvider,
     ORMProvider,
-    {{cookiecutter.project_name|replace(' ', '')}}Provider,
+    {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider,
 ]

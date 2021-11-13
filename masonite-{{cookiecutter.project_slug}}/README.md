@@ -1,7 +1,7 @@
-# Masonite {{ cookiecutter.project_name }}
+# {{ cookiecutter.project_name }}
 
 <p align="center">
-    <img src="https://banners.beyondco.de/Masonite%20{{ cookiecutter.project_name }}.png?theme=light&packageManager=pip+install&packageName={{ cookiecutter.project_slug }}&pattern=topography&style=style_1&description={{ cookiecutter.project_description }}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
+    <img src="https://banners.beyondco.de/{{ cookiecutter.project_name }}.png?theme=light&packageManager=pip+install&packageName=masonite-{{ cookiecutter.project_slug }}&pattern=topography&style=style_1&description={{ cookiecutter.project_description }}&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fgblobscdn.gitbook.com%2Fspaces%2F-L9uc-9XAlqhXkBwrLMA%2Favatar.png">
 </p>
 
 <p align="center">
@@ -37,37 +37,31 @@ Also be sure to join the [Slack channel](http://slack.masoniteproject.com/)!
 ## Installation
 
 ```bash
-pip install {{ cookiecutter.project_slug }}
+pip install masonite-{{ cookiecutter.project_slug }}
 ```
 
 ## Configuration
 
-Add {{cookiecutter.project_name|replace(' ', '')}}Provider to your project in `config/providers.py`:
+Add {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider to your project in `config/providers.py`:
 
 ```python
 # config/providers.py
 # ...
-from masonite.{{ cookiecutter.pkg_name }} import {{cookiecutter.project_name|replace(' ', '')}}Provider
+from {{ cookiecutter.pkg_name }} import {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider
 
 # ...
 PROVIDERS = [
     # ...
     # Third Party Providers
-    {{cookiecutter.project_name|replace(' ', '')}}Provider,
+    {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider,
     # ...
 ]
 ```
 
-Then install OR publish the required package files (configuration, views ...):
+Then you can publish the package resources (if needed) by doing:
 
 ```bash
-python craft {{cookiecutter.pkg_name}}:install
-```
-
-OR (depending on your preferences)
-
-```bash
-python craft publish {{cookiecutter.project_name|replace(' ', '')}}Provider
+python craft package:publish {{ cookiecutter.project_slug }}
 ```
 
 ## Usage
@@ -85,7 +79,7 @@ Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 ## License
 
 {% if cookiecutter.open_source_license == 'Not open source' -%}
-Masonite {{ cookiecutter.project_name}} is a closed-sourced software.
+{{ cookiecutter.project_name}} is a closed-sourced software.
 {% else %}
-Masonite {{ cookiecutter.project_name}} is open-sourced software licensed under the [{{ cookiecutter.open_source_license }}](LICENSE).
+{{ cookiecutter.project_name}} is open-sourced software licensed under the [{{ cookiecutter.open_source_license }}](LICENSE).
 {% endif %}

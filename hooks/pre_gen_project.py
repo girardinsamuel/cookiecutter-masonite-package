@@ -9,7 +9,7 @@ SUCCESS = "\x1b[1;32m [SUCCESS]: "
 
 
 pkg_name = "{{ cookiecutter.pkg_name }}"
-pip_name = "{{ cookiecutter.project_slug }}"
+pip_name = "masonite-{{ cookiecutter.project_slug }}"
 
 
 if not pip_name.startswith("masonite-"):
@@ -25,15 +25,6 @@ if not re.match(r"^[a-z0-9_-]+$", pip_name):
     print(
         WARNING
         + "%s is not a valid Masonite pip package! Reasons: Python pip package should contain only a-z,0-9,_,-."
-        % pkg_name
-        + TERMINATOR
-    )
-    sys.exit(1)
-
-if "masonite" in pkg_name:
-    print(
-        WARNING
-        + "%s is not a valid Masonite package! Reasons: package name cannot contains masonite as it will be imported from 'masonite.'."
         % pkg_name
         + TERMINATOR
     )

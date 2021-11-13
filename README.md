@@ -13,7 +13,7 @@ You can see a demo repository, to have an overview of the scaffolded package res
 ## Masonite Official Documentation
 
 First check the Official Documentation on [creating packages](https://docs.masoniteproject.com/advanced/creating-packages) !
-You can also create a package from the Official Github template: [starter-package](https://github.com/MasoniteFramework/starter-package).
+You can also create a package from the official Github template: [starter-package](https://github.com/MasoniteFramework/starter-package).
 
 ## Crafting the package
 
@@ -50,60 +50,9 @@ project_name [Package Name]: My Package
 Then the following prompts should not require modifications:
 
 ```
-project_slug [masonite-my-package]:
+project_slug [my-package]:
 project_description [Package description in one line displayed e.g. in README]:
 pkg_name [my_package]:
 [...]
 repository [https://github.com/girardinsamuel/masonite-my-package]:
 ```
-
-## Dev Quick Start
-
-Whatever crafting option you choose when your repository is created, you should start by creating a virtual environment and activate it:
-
-```
-$ python3 -m venv venv
-$ source venv/bin/activate
-```
-
-Init dependencies (this will install Masonite, a few development related packages and the package itself):
-
-```
-$ make init
-```
-
-Finally you can run the tests and start building your application:
-
-```
-$ python -m pytest
-```
-
-You can start the test project in the repo to test your package at `http://localhost:8000/`:
-
-```
-$ python craft serve
-```
-
-**Setup coverage**
-
-The repository is already setup to use `Coveralls` to publish the package coverage. You just need to:
-
-1. Login/register on [coveralls.io](https://coveralls.io/).
-2. Select your Github repository and enable coveralls.
-
-Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
-Coveralls and should display correctly at first coveralls score publish.
-
-Of course you can use `codecov` if you prefer, you will have to edit Github workflow and the badge.
-
-**Publish your package on PyPi**
-
-To publish the package read the Official Documentation on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
-
-A Github workflow is already configured to publish the package to PyPi when
-a release is created. You just have to:
-
-1. Login/register on [pypi.io](https://pypi.io/).
-2. Add your credentials as Github Secrets in this repository: `PYPI_USERNAME` and `PYPI_PASSWORD`
-
-More info in [Contributing Documentation](CONTRIBUTING.md).

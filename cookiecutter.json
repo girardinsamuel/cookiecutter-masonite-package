@@ -1,14 +1,13 @@
 {
-  "project_name": "Package Name",
-  "project_slug": "masonite-{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "project_name": "Masonite Package Name",
+  "project_slug": "{{ cookiecutter.project_name|replace('Masonite', '')|replace('masonite', '')|trim|lower|replace(' ', '-') }}",
   "project_description": "Package description in one line displayed e.g. in README",
-  "pkg_name": "{{ cookiecutter.project_slug|replace('masonite-', '')|replace('-', '_') }}",
+  "pkg_name": "{{ cookiecutter.project_slug|replace('-', '_') }}",
   "full_name": "John Doe",
   "email": "john.doe@domain.com",
   "github_username": "MasoniteFramework",
-  "pypi_username": "{{ cookiecutter.github_username }}",
   "version": "0.0.1",
-  "repository": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+  "repository": "https://github.com/{{ cookiecutter.github_username }}/masonite-{{ cookiecutter.project_slug }}",
   "python_min": "3.6",
   "open_source_license": [
     "MIT license",
@@ -18,5 +17,7 @@
     "GNU General Public License v3",
     "Not open source"
   ],
-  "_copy_without_render": [".github/*"]
+  "_copy_without_render": [
+    ".github/*"
+  ]
 }

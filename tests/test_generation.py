@@ -15,13 +15,12 @@ RE_OBJ = re.compile(PATTERN)
 def context():
     return {
         "project_name": "Masonite Test Package",
-        "project_slug": "masonite-test-package",
+        "project_slug": "test-package",
         "pkg_name": "test_package",
         "project_description": "A short description of the project.",
         "full_name": "Test Author",
         "email": "test@example.com",
         "github_username": "testauthor",
-        "pypi_username": "testauthor",
         "version": "0.0.1",
         "repository": "https://github.com/testauthor/masonite-test-package",
         "python_min": "3.6",
@@ -105,17 +104,6 @@ def test_invalid_project_slug_if_no_pip_installable(cookies, context, slug):
     assert isinstance(result.exception, FailedHookException)
 
 
-@pytest.mark.parametrize(
-    "slug", ["project-slug", "project", "project_slug", "project-masonite"]
-)
-def test_invalid_project_slug_if_no_masonite_namespace(cookies, context, slug):
-    """Invalid slug should failed pre-generation hook."""
-    context.update({"project_slug": slug})
-    result = cookies.bake(extra_context=context)
-    assert result.exit_code != 0
-    assert isinstance(result.exception, FailedHookException)
-
-
 @pytest.mark.parametrize("pkg", ["package", "super_package", "settings_12"])
 def test_package_names_are_valid(cookies, context, pkg):
     """Check list contains valid Python package names"""
@@ -135,17 +123,6 @@ def test_invalid_package_name_if_not_python_importable(cookies, context, pkg):
     assert isinstance(result.exception, FailedHookException)
 
 
-@pytest.mark.parametrize(
-    "pkg", ["masonite_project", "masoniteproject", "package_masonite"]
-)
-def test_invalid_package_name_if_contains_masonite(cookies, context, pkg):
-    """Invalid package should failed pre-generation hook."""
-    context.update({"pkg_name": pkg})
-    result = cookies.bake(extra_context=context)
-    assert result.exit_code != 0
-    assert isinstance(result.exception, FailedHookException)
-
-
 @pytest.mark.parametrize("context_override", SUPPORTED_COMBINATIONS, ids=_fixture_id)
 def test_project_generation(cookies, context, context_override):
     """Test that project is generated and fully rendered."""
@@ -153,7 +130,7 @@ def test_project_generation(cookies, context, context_override):
     result = cookies.bake(extra_context={**context, **context_override})
     assert result.exit_code == 0
     assert result.exception is None
-    assert result.project.basename == context["project_slug"]
+    assert result.project.basename == f"masonite-{context['project_slug']}"
     assert result.project.isdir()
 
     paths = build_files_list(str(result.project))
@@ -199,6 +176,6 @@ def test_can_import_package_in_masonite_namespace(cookies, context):
     for now only packages sources (src/*)"""
     result = cookies.bake(extra_context=context)
 
-    test_command = "import masonite.{0}".format(context["pkg_name"])
+    test_command = f"import {context['pkg_name']}"
     run_inside_dir("python -c '{0}'".format(test_command), str(result.project))
     assert result is not None

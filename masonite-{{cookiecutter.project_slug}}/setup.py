@@ -4,17 +4,15 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="{{ cookiecutter.project_slug }}",
+    name="masonite-{{ cookiecutter.project_slug }}",
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version="{{ cookiecutter.version }}",
     packages=[
-        "masonite.{{ cookiecutter.pkg_name }}",
-        "masonite.{{ cookiecutter.pkg_name }}.providers",
-        "masonite.{{ cookiecutter.pkg_name }}.config",
-        "masonite.{{ cookiecutter.pkg_name }}.controllers",
-        "masonite.{{ cookiecutter.pkg_name }}.commands",
+        "{{ cookiecutter.pkg_name }}",
+        "{{ cookiecutter.pkg_name }}.providers",
+        "{{ cookiecutter.pkg_name }}.config",
     ],
     package_dir={"": "src"},
     description="{{ cookiecutter.project_description }}",
