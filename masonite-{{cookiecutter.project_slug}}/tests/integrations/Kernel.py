@@ -1,17 +1,19 @@
-from masonite.auth import Sign
-from masonite.foundation import response_handler
-from masonite.storage import StorageCapsule
-from masonite.environment import LoadEnvironment
-from masonite.configuration import Configuration, config
-from masonite.middleware import (
+import os
+
+from src.masonite.auth import Sign
+from src.masonite.foundation import response_handler
+from src.masonite.storage import StorageCapsule
+from src.masonite.environment import LoadEnvironment
+from src.masonite.configuration import Configuration, config
+from src.masonite.middleware import (
     VerifyCsrfToken,
     SessionMiddleware,
     EncryptCookies,
     LoadUserMiddleware,
 )
-from masonite.routes import Route
-from masonite.utils.structures import load
-from masonite.utils.location import base_path
+from src.masonite.routes import Route
+from src.masonite.utils.structures import load
+from src.masonite.utils.location import base_path
 
 
 class Kernel:
@@ -53,9 +55,12 @@ class Kernel:
         self.application.bind("validation.location", "tests/integrations/validation")
         self.application.bind("tasks.location", "tests/integrations/tasks")
         self.application.bind("events.location", "tests/integrations/events")
+        self.application.bind("policies.location", "tests/integrations/policies")
         self.application.bind("notifications.location", "tests/integrations/notifications")
+        self.application.bind("resources.location", "tests/integrations/resources")
+        self.application.bind("models.location", "tests/integrations/app/models")
 
-        self.application.bind("server.runner", "masonite.commands.ServeCommand.main")
+        self.application.bind("server.runner", "src.masonite.commands.ServeCommand.main")
 
     def register_middleware(self):
         self.application.make("middleware").add(self.route_middleware).add(self.http_middleware)
@@ -63,7 +68,7 @@ class Kernel:
     def register_routes(self):
         Route.set_controller_locations(self.application.make("controllers.location"))
 
-        self.application.bind("routes.location", "tests/integrations/routes/web")
+        self.application.bind("routes.location", "tests/integrations/web")
         self.application.make("router").add(
             Route.group(
                 load(self.application.make("routes.location"), "ROUTES", []),
