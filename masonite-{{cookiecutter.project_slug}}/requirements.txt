@@ -1,2 +1,2 @@
-https://github.com/MasoniteFramework/masonite4/archive/master.zip
-https://github.com/MasoniteFramework/orm/archive/2.0.zip
+masonite>=4,<5
+masonite-orm>=2,<3

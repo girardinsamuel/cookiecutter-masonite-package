@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -9,11 +9,7 @@ setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version="{{ cookiecutter.version }}",
-    packages=[
-        "{{ cookiecutter.pkg_name }}",
-        "{{ cookiecutter.pkg_name }}.providers",
-        "{{ cookiecutter.pkg_name }}.config",
-    ],
+    packages=find_packages(),
     package_dir={"": "src"},
     description="{{ cookiecutter.project_description }}",
     long_description=long_description,
@@ -54,6 +50,8 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: WSGI",
         "Topic :: Software Development :: Libraries :: Application Frameworks",
         "Topic :: Software Development :: Libraries :: Python Modules",
+        # List package on masonite packages website
+        "Framework :: Masonite",
     ],
     # What does your project relate to?
     keywords="Masonite, Python, Development",
