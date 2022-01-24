@@ -9,7 +9,11 @@ setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version="{{ cookiecutter.version }}",
-    packages=find_packages(),
+    packages=[
+        "{{ cookiecutter.pkg_name }}",
+        "{{ cookiecutter.pkg_name }}.providers",
+        "{{ cookiecutter.pkg_name }}.config",
+    ],
     package_dir={"": "src"},
     description="{{ cookiecutter.project_description }}",
     long_description=long_description,

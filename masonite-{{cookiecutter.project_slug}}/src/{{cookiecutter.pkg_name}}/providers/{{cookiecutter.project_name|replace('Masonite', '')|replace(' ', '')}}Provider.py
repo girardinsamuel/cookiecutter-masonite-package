@@ -16,7 +16,6 @@ class {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Prov
     def register(self):
         super().register()
 
-
     def boot(self):
         """Boots services required by the container."""
         pass

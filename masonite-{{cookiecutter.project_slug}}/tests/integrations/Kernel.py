@@ -14,7 +14,7 @@ from masonite.routes import Route
 from masonite.configuration.Configuration import Configuration
 from masonite.configuration import config
 
-from app.middlewares.VerifyCsrfToken import VerifyCsrfToken
+from .app.middlewares.VerifyCsrfToken import VerifyCsrfToken
 
 
 class Kernel:
