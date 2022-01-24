@@ -1,5 +1,6 @@
 from masonite.environment import env
 
+
 BROADCASTS = {
     "default": "pusher",
     "pusher": {

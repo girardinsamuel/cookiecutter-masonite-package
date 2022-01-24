@@ -2,14 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Masonite | Welcome</title>
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>{% block title %}Masonite 4{% endblock %}</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    {% block head %}
+    <!-- <link rel="stylesheet" href="/assets/css/app.css"> -->
+    {% endblock %}
   </head>
   <body>
-    <h1>Hello Package World</h1>
-    <p>
-      This is a test project for developing your package:
-      <strong>{{ cookiecutter.project_slug }}</strong>
-    </p>
+    {% block content %}{% endblock %}
+    {% block js %}
+    <!-- <script src="/assets/js/app.js"></script> -->
+    {% endblock %}
   </body>
 </html>

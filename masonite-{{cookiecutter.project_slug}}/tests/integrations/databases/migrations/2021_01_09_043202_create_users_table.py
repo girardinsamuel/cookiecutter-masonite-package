@@ -9,12 +9,12 @@ class CreateUsersTable(Migration):
             table.string("name")
             table.string("email").unique()
             table.string("password")
-            table.boolean("verified")
+            table.string("second_password").nullable()
             table.string("remember_token").nullable()
+            table.string("phone").nullable()
             table.timestamp("verified_at").nullable()
-            table.string("avatar").nullable()
-            table.soft_deletes()
             table.timestamps()
+            table.soft_deletes()
 
     def down(self):
         """Revert the migrations."""
