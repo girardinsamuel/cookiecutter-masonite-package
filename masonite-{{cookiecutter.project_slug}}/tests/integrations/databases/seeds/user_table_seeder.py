@@ -2,7 +2,7 @@
 from masoniteorm.seeds import Seeder
 from masonite.facades import Hash
 
-from app.models.User import User
+from tests.integrations.app.models.User import User
 
 
 class UserTableSeeder(Seeder):
