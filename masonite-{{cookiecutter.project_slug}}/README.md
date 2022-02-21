@@ -32,7 +32,7 @@ New to Masonite ? Please first read the [Official Documentation](https://docs.ma
 Masonite strives to have extremely comprehensive documentation 😃. It would be wise to go through the tutorials there.
 If you find any discrepencies or anything that doesn't make sense, be sure to comment directly on the documentation to start a discussion!
 
-Also be sure to join the [Slack channel](http://slack.masoniteproject.com/)!
+Have questions or want to talk? Be sure to join the [Masonite Discord Community](https://discord.gg/TwKeFahmPZ)!
 
 ## Installation
 
