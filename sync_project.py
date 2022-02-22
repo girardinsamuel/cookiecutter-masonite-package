@@ -13,7 +13,8 @@ import_lines = [
     "\n",
 ]
 insert_lines = [
-    "    {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider,\n"
+    "\n",
+    "PROVIDERS += [ {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider ]\n",
 ]
 
 import_index = None
@@ -29,9 +30,8 @@ with open(os.path.join(TEST_PROJECT_PATH, "config", "providers.py"), "r") as f:
     new_lines = (
         file_lines[0:import_index]
         + import_lines
-        + file_lines[import_index:insert_index]
+        + file_lines[import_index:]
         + insert_lines
-        + file_lines[insert_index:]
     )
 
 

@@ -48,5 +48,6 @@ PROVIDERS = [
     ValidationProvider,
     AuthorizationProvider,
     ORMProvider
-    {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider,
 ]
+
+PROVIDERS += [ {{cookiecutter.project_name|replace('Masonite', '')|replace(' ', '')}}Provider ]
