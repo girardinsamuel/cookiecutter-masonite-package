@@ -18,6 +18,7 @@
     "Not open source"
   ],
   "_copy_without_render": [
-    ".github/*"
+    ".github/*",
+    "templates/*.html"
   ]
 }
