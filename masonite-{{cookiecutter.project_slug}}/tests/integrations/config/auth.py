@@ -1,4 +1,4 @@
-from ..app.models.User import User
+from tests.integrations.app.models.User import User
 
 GUARDS = {
     "default": "web",

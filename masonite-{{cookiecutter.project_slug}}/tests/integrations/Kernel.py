@@ -14,7 +14,7 @@ from masonite.routes import Route
 from masonite.configuration.Configuration import Configuration
 from masonite.configuration import config
 
-from .app.middlewares.VerifyCsrfToken import VerifyCsrfToken
+from tests.integrations.app.middlewares import VerifyCsrfToken, AuthenticationMiddleware
 
 
 class Kernel:
@@ -23,6 +23,7 @@ class Kernel:
 
     route_middleware = {
         "web": [SessionMiddleware, LoadUserMiddleware, VerifyCsrfToken],
+        "auth": [AuthenticationMiddleware],
     }
 
     def __init__(self, app):
@@ -53,18 +54,18 @@ class Kernel:
         # set locations
         self.application.bind("resources.location", "tests/integrations/resources/")
         self.application.bind("controllers.location", "tests/integrations/app/controllers")
-        self.application.bind("jobs.location", "tests/integrations/jobs")
-        self.application.bind("providers.location", "tests/integrations/providers")
-        self.application.bind("mailables.location", "tests/integrations/mailables")
-        self.application.bind("listeners.location", "tests/integrations/listeners")
-        self.application.bind("validation.location", "tests/integrations/validation")
-        self.application.bind("notifications.location", "tests/integrations/notifications")
-        self.application.bind("events.location", "tests/integrations/events")
-        self.application.bind("tasks.location", "tests/integrations/tasks")
+        self.application.bind("jobs.location", "tests/integrations/app/jobs")
+        self.application.bind("providers.location", "tests/integrations/app/providers")
+        self.application.bind("mailables.location", "tests/integrations/app/mailables")
+        self.application.bind("listeners.location", "tests/integrations/app/listeners")
+        self.application.bind("validation.location", "tests/integrations/app/validation")
+        self.application.bind("notifications.location", "tests/integrations/app/notifications")
+        self.application.bind("events.location", "tests/integrations/app/events")
+        self.application.bind("tasks.location", "tests/integrations/app/tasks")
         self.application.bind("models.location", "tests/integrations/app/models")
-        self.application.bind("observers.location", "tests/integrations/models/observers")
-        self.application.bind("policies.location", "tests/integrations/policies")
-        self.application.bind("commands.location", "tests/integrations/commands")
+        self.application.bind("observers.location", "tests/integrations/app/models/observers")
+        self.application.bind("policies.location", "tests/integrations/app/policies")
+        self.application.bind("commands.location", "tests/integrations/app/commands")
         self.application.bind("middlewares.location", "tests/integrations/app/middlewares")
 
         self.application.bind("server.runner", "masonite.commands.ServeCommand.main")
