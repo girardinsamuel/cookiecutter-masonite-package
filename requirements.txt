@@ -6,7 +6,7 @@ black
 
 # Testing
 # ------------------------------------------------------------------------------
-pytest-cookies
+pytest-cookies==0.7.0
 pytest==6.2.5
 pytest-instafail==0.4.2
 https://github.com/MasoniteFramework/masonite4/archive/master.zip
