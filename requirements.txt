@@ -1,4 +1,4 @@
-cookiecutter
+cookiecutter==2.3.0
 binaryornot
 pyyaml
 flake8
