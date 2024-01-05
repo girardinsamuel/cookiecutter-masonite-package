@@ -1,7 +1,7 @@
 cookiecutter
 binaryornot
 pyyaml
-flake8
+flake8==7.0.0
 black
 
 # Testing
