@@ -2,7 +2,7 @@ cookiecutter
 binaryornot
 pyyaml
 flake8
-black
+black==24.4.1
 
 # Testing
 # ------------------------------------------------------------------------------
