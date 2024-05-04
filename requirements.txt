@@ -11,4 +11,4 @@ pytest==6.2.5
 pytest-instafail==0.4.2
 https://github.com/MasoniteFramework/masonite4/archive/master.zip
 https://github.com/MasoniteFramework/orm/archive/2.0.zip
-cryptography
+cryptography==42.0.6
